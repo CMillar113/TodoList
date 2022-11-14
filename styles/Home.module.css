@@ -28,6 +28,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .title,
@@ -36,12 +37,14 @@
 }
 
 .button {
-  width: 40%;
+  width: 50%;
   background-color: #5a53cc;
   border: #5a53cc;
   border-style: inherit;
-  border-radius: 8px;
+  border-radius: 10px;
   color: black;
+  font-size: medium;
+  padding: 0.5px;
 }
 
 .description {
@@ -64,15 +67,18 @@
   background-color: #fc7554;
   border: #fc7554;
   border-style: inherit;
-  border-radius: 8px;
+  border-radius: 10px;
   color: black;
   font-size: large;
+  padding: 4px;
 }
 
 .input {
   width: 70%;
   height: 35px;
   margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 8px 4px;
   text-align: center;
   background-color: white;
   color: black;

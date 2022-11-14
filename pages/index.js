@@ -47,31 +47,49 @@ export default function Home() {
         <div className={styles.grid}></div>
 
         {/* Return card of list items */}
-        {
-          (itemList = list.map((item) => {
-            console.log(`this one ${item.title} ${item.id}`);
-            return (
-              <div key={`key ${item.title} ${item.id}`} className={styles.card}>
-                <div
-                  key={`item ${item.id} ${item.title}`}
-                  id={item.id}
-                  title={item.title}
-                >
-                  <h1> {item.title} </h1>
-                </div>
-                <button
-                  className={styles.button}
-                  onClick={() => {
-                    let _delete = item.id;
-                    setList(list.filter((item) => item.id !== _delete));
-                  }}
-                >
-                  Complete
-                </button>
+        {list.map((item) => {
+          console.log(`this one ${item.title} ${item.id}`);
+
+          return item.title !== "" ? (
+            <div key={`key ${item.title} ${item.id}`} className={styles.card}>
+              <div
+                key={`item ${item.id} ${item.title}`}
+                id={item.id}
+                title={item.title}
+              >
+                <h1> {item.title} </h1>
               </div>
-            );
-          }))
-        }
+              <button
+                className={styles.button}
+                onClick={() => {
+                  let _delete = item.id;
+                  setList(list.filter((item) => item.id !== _delete));
+                }}
+              >
+                Complete
+              </button>
+            </div>
+          ) : (
+            <div key={`key ${item.title} ${item.id}`} className={styles.card}>
+              <div
+                key={`item ${item.id} ${item.title}`}
+                id={item.id}
+                title={item.title}
+              >
+                <h1>Relax</h1>
+              </div>
+              <button
+                className={styles.button}
+                onClick={() => {
+                  let _delete = item.id;
+                  setList(list.filter((item) => item.id !== _delete));
+                }}
+              >
+                Complete
+              </button>
+            </div>
+          );
+        })}
 
         {/* Button for adding new items */}
         <input
