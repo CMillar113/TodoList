@@ -93,6 +93,8 @@ export default function Home() {
 
         {/* Button for adding new items */}
         <input
+          autoFocus
+          value=""
           className={styles.input}
           maxLength={20}
           value={title}
