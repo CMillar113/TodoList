@@ -24,6 +24,12 @@
   font-size: 4rem;
 }
 
+.h3 {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2rem;
+}
+
 .title,
 .description {
   text-align: center;
@@ -53,21 +59,24 @@
 }
 
 .add {
-  width: 40%;
+  width: 70%;
+  height: 30px;
   background-color: #fc7554;
   border: #fc7554;
   border-style: inherit;
   border-radius: 8px;
   color: black;
+  font-size: large;
 }
 
 .input {
   width: 70%;
-  height: 25px;
+  height: 35px;
   margin-bottom: 12px;
   text-align: center;
   background-color: white;
   color: black;
+  font-size: large;
 }
 
 .card {
@@ -101,14 +110,27 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #5a53cc;
+  border-color: #5a53cc;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 750px) {
+  .input {
+    height: 50px;
+    max-width: 800px;
+    font-size: x-large;
+  }
+  .add {
+    height: 50px;
+    max-width: 800px;
+    font-size: x-large;
   }
 }
 
